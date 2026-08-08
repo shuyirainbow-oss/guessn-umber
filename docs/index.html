@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>踩地雷遊戲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>踩地雷</h1>
+
+    <section class="controls">
+      <label>列數：<input id="rows" type="number" min="5" max="20" value="10"></label>
+      <label>欄數：<input id="cols" type="number" min="5" max="20" value="10"></label>
+      <label>地雷數：<input id="mines" type="number" min="5" max="80" value="15"></label>
+      <button id="start">開始新遊戲</button>
+    </section>
+
+    <section class="status-bar">
+      <div>地雷剩餘：<span id="flagsLeft">0</span></div>
+      <div>狀態：<span id="gameStatus">等待開始</span></div>
+      <button id="reset">重新開始</button>
+    </section>
+
+    <section id="boardContainer" class="board"></section>
+
+    <section class="legend">
+      <p>點擊格子打開，右鍵標記/取消標記地雷。</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
