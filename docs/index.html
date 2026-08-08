@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>踩地雷遊戲</title>
+  <title>猜數字遊戲</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-    <h1>踩地雷</h1>
+    <h1>猜數字</h1>
 
-    <section class="controls">
-      <label>列數：<input id="rows" type="number" min="5" max="20" value="10"></label>
-      <label>欄數：<input id="cols" type="number" min="5" max="20" value="10"></label>
-      <label>地雷數：<input id="mines" type="number" min="5" max="80" value="15"></label>
-      <button id="start">開始新遊戲</button>
-    </section>
+    <section class="game-panel">
+      <div class="settings">
+        <label>最小值：<input id="minValue" type="number" min="0" value="1"></label>
+        <label>最大值：<input id="maxValue" type="number" min="1" value="100"></label>
+        <button id="newGame">開始新遊戲</button>
+      </div>
 
-    <section class="status-bar">
-      <div>地雷剩餘：<span id="flagsLeft">0</span></div>
-      <div>狀態：<span id="gameStatus">等待開始</span></div>
-      <button id="reset">重新開始</button>
-    </section>
-
-    <section id="boardContainer" class="board"></section>
-
-    <section class="legend">
-      <p>點擊格子打開，右鍵標記/取消標記地雷。</p>
+      <div class="play-area">
+        <p class="description">我已選好一個數字，請在範圍內猜猜看。</p>
+        <div class="guess-row">
+          <input id="guessInput" type="number" placeholder="輸入你的猜測" autofocus>
+          <button id="guessBtn">猜一猜</button>
+        </div>
+        <div class="status">
+          <p>結果：<span id="resultText">等待你的第一個猜測</span></p>
+          <p>已猜次數：<span id="attempts">0</span></p>
+        </div>
+        <div class="history">
+          <h2>猜測歷史</h2>
+          <ol id="guessHistory"></ol>
+        </div>
+      </div>
     </section>
   </main>
 
