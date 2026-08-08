@@ -113,6 +113,26 @@ button:hover {
   color: #e7f0ff;
 }
 
+.rules {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #eef5ff;
+}
+
+.rules h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: #caf0ff;
+}
+
+.rules ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.65;
+}
+
 .history {
   margin-top: 16px;
 }

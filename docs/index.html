@@ -12,13 +12,12 @@
 
     <section class="game-panel">
       <div class="settings">
-        <label>最小值：<input id="minValue" type="number" min="0" value="1"></label>
-        <label>最大值：<input id="maxValue" type="number" min="1" value="100"></label>
+        <p class="fixed-range">範圍固定：1 ~ 100</p>
         <button id="newGame">開始新遊戲</button>
       </div>
 
       <div class="play-area">
-        <p class="description">我已選好一個數字，請在範圍內猜猜看。</p>
+        <p class="description">我已選好一個數字，請在 1 到 100 的範圍內猜猜看。</p>
         <div class="guess-row">
           <input id="guessInput" type="number" placeholder="輸入你的猜測" autofocus>
           <button id="guessBtn">猜一猜</button>
@@ -26,6 +25,16 @@
         <div class="status">
           <p>結果：<span id="resultText">等待你的第一個猜測</span></p>
           <p>已猜次數：<span id="attempts">0</span></p>
+        </div>
+        <div class="rules">
+          <h2>遊戲規則</h2>
+          <ul>
+            <li>系統會隨機選一個 1 到 100 的整數。</li>
+            <li>請在輸入框中輸入你猜的數字，然後按「猜一猜」。</li>
+            <li>如果數字太小，系統會提示「太小了」。</li>
+            <li>如果數字太大，系統會提示「太大了」。</li>
+            <li>猜中後會顯示你猜的次數，遊戲結束。</li>
+          </ul>
         </div>
         <div class="history">
           <h2>猜測歷史</h2>
